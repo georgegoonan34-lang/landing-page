@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif);
+
+  --color-background-primary: #09090F;
+  --color-background-secondary: #0F0F17;
+  --color-background-tertiary: #151520;
+  --color-background-surface: #1A1A27;
+  --color-background-elevated: #21212F;
+
+  --color-foreground-primary: #F0F0F3;
+  --color-foreground-secondary: #A0A0B0;
+  --color-foreground-muted: #606070;
+
+  --color-accent-primary: #C8956C;
+  --color-accent-hover: #D4A47D;
+  --color-accent-muted: rgba(200, 149, 108, 0.15);
+
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-default: rgba(255, 255, 255, 0.10);
+  --color-border-emphasis: rgba(255, 255, 255, 0.15);
+
+  --color-success: #4ADE80;
+  --color-destructive: #EF4444;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Performance-optimized CSS animations (replaces JS-driven framer-motion loops) */
+@keyframes waveform {
+  0%, 100% { height: 10%; }
+  50% { height: var(--wave-height, 60%); }
+}
+
+.animate-waveform {
+  animation: waveform 1.4s ease-in-out infinite;
+  --wave-height: 60%;
+}
+.animate-waveform:nth-child(odd) { --wave-height: 80%; }
+.animate-waveform:nth-child(3n) { --wave-height: 45%; }
+.animate-waveform:nth-child(4n+1) { --wave-height: 70%; }
+
+@keyframes call-routing-pulse {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(300%); }
 }
