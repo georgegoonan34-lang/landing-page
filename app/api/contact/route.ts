@@ -32,7 +32,7 @@ export async function POST(req: Request) {
         const result = contactSchema.safeParse(body);
 
         if (!result.success) {
-            const firstError = result.error.errors[0]?.message || 'Invalid form data';
+            const firstError = result.error.issues[0]?.message || 'Invalid form data';
             return NextResponse.json({ error: firstError }, { status: 400 });
         }
 
