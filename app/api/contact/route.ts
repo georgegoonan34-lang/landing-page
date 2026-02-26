@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
 import { contactSchema } from '@/lib/validation';
 import { sendContactEmail } from '@/lib/email';
 
@@ -36,37 +35,12 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: firstError }, { status: 400 });
         }
 
-        const data = result.data;
-
-        // Save to Supabase
-        const { error: dbError } = await supabase
-            .from('contact_submissions')
-            .insert([{
-                name: data.name,
-                business_name: data.business_name,
-                trade_type: data.trade_type,
-                phone: data.phone,
-                email: data.email,
-                message: data.message,
-                status: 'new',
-            }]);
-
-        if (dbError) {
-            console.error('Supabase error:', dbError);
-            return NextResponse.json({ error: 'Failed to submit enquiry' }, { status: 500 });
-        }
-
         // Send email notification
-        try {
-            await sendContactEmail(data);
-        } catch (emailError) {
-            console.error('Email error:', emailError);
-            // Data is saved — don't fail the request
-        }
+        await sendContactEmail(result.data);
 
         return NextResponse.json({ success: true }, { status: 200 });
     } catch (error) {
         console.error('API Error:', error);
-        return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to send message. Please try again.' }, { status: 500 });
     }
 }
