@@ -8,7 +8,6 @@ const Problem = dynamic(() => import("@/components/sections/Problem").then(mod =
 const HowItWorks = dynamic(() => import("@/components/sections/HowItWorks").then(mod => mod.HowItWorks));
 const Features = dynamic(() => import("@/components/sections/Features").then(mod => mod.Features));
 const Freelance = dynamic(() => import("@/components/sections/Freelance").then(mod => mod.Freelance));
-const Pricing = dynamic(() => import("@/components/sections/Pricing").then(mod => mod.Pricing));
 const About = dynamic(() => import("@/components/sections/About").then(mod => mod.About));
 const Contact = dynamic(() => import("@/components/sections/Contact").then(mod => mod.Contact));
 
@@ -22,7 +21,6 @@ export default function Home() {
         <HowItWorks />
         <Features />
         <Freelance />
-        <Pricing />
         <About />
         <Contact />
       </main>

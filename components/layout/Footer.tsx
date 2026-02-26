@@ -5,7 +5,6 @@ const FOOTER_LINKS = {
     Service: [
         { name: "How It Works", href: "#how-it-works" },
         { name: "Features", href: "#features" },
-        { name: "Pricing", href: "#pricing" },
     ],
     Company: [
         { name: "About Us", href: "#about" },
