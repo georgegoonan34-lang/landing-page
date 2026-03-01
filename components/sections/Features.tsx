@@ -34,7 +34,7 @@ export function Features() {
                         whileHover={{ scale: 1.01 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4 }}
-                        className={`p-8 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 md:col-span-2 flex flex-col`}
+                        className={`p-6 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 md:col-span-2 flex flex-col`}
                     >
                         <div className="absolute inset-x-0 -top-px h-px w-full bg-gradient-to-r from-transparent via-accent-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
@@ -115,7 +115,7 @@ export function Features() {
                         whileHover={{ scale: 1.01 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: 0.1 }}
-                        className={`p-8 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 flex flex-col`}
+                        className={`p-6 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 flex flex-col`}
                     >
                         {/* Dashboard Visual */}
                         <div className="h-60 mb-8 mt-2 relative rounded-xl border border-white/5 bg-[#09090b] overflow-hidden flex flex-col font-sans">
@@ -199,7 +199,7 @@ export function Features() {
                         whileHover={{ scale: 1.01 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: 0.2 }}
-                        className={`p-8 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 flex flex-col`}
+                        className={`p-6 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 flex flex-col`}
                     >
                         {/* Dashboard Visual - iMessage Style */}
                         <div className="h-60 mb-8 mt-2 relative rounded-xl border border-white/5 bg-[#09090b] overflow-hidden flex flex-col font-sans">
@@ -249,7 +249,7 @@ export function Features() {
                         whileHover={{ scale: 1.01 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: 0.3 }}
-                        className={`p-8 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 md:col-span-2 flex flex-col`}
+                        className={`p-6 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 md:col-span-2 flex flex-col`}
                     >
                         <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-red-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
@@ -299,7 +299,7 @@ export function Features() {
                         whileHover={{ scale: 1.01 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: 0.4 }}
-                        className={`p-8 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 md:col-span-2 flex flex-col`}
+                        className={`p-6 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 md:col-span-2 flex flex-col`}
                     >
                         <div className="h-60 mb-8 mt-2 relative rounded-xl border border-white/5 bg-[#09090b] overflow-hidden flex flex-col font-sans">
                             <div className="h-8 border-b border-white/5 flex items-center px-4 gap-2 bg-white/[0.02] shrink-0">
@@ -357,7 +357,7 @@ export function Features() {
                         whileHover={{ scale: 1.01 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: 0.5 }}
-                        className={`p-8 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 flex flex-col`}
+                        className={`p-6 md:p-10 rounded-[2rem] bg-[#0c0c0e] border border-white/[0.05] group overflow-hidden relative col-span-1 flex flex-col`}
                     >
                         <div className="h-60 mb-8 mt-2 relative rounded-xl border border-white/5 bg-[#09090b] overflow-hidden flex flex-col font-sans">
                             <div className="h-8 border-b border-white/5 flex items-center px-4 gap-2 bg-white/[0.02] shrink-0">

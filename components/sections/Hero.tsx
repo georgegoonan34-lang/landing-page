@@ -25,7 +25,7 @@ export function Hero() {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-[140vh] bg-[#09090b] pt-32 overflow-hidden flex flex-col items-center"
+            className="relative pb-24 md:pb-0 md:min-h-[140vh] bg-[#09090b] pt-24 md:pt-32 overflow-hidden flex flex-col items-center"
             id="hero"
         >
             {/* Cobalt-style Radial Gradient Background */}
@@ -94,7 +94,7 @@ export function Hero() {
             </motion.div>
 
             {/* The "Dashboard/Command Center" Visual that scales up */}
-            <div className="absolute top-[60vh] md:top-[70vh] w-full flex justify-center perspective-[2000px] px-4 sm:px-6">
+            <div className="relative mt-24 md:mt-0 md:absolute md:top-[60vh] lg:top-[70vh] w-full flex justify-center perspective-[2000px] px-4 sm:px-6">
                 <motion.div
                     style={{
                         scale: dashboardScale,
